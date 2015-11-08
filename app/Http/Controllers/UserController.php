@@ -21,7 +21,7 @@ class UserController extends Controller {
 	  if($result)
 	  {
 	  	
-	  if($result[0]->user_type)
+	  if($result[0]->usertype)
 	  {
 		
 		session(['email' => $user_id]);
@@ -31,7 +31,8 @@ class UserController extends Controller {
 		//$data=Session::all();
 		Session::save();
 		//print_r($data);
-	  	echo "1|".$result[0]->usertype;
+		if($result[0]->usertype==1) $fol='det';
+	  	echo "1|".$fol;
 		
 	  }
 	  

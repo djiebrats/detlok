@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 Route::post('/login', 'UserController@dologin');
+
+
+Route::get('/det', function () {
+    return view('detektif');
+});
